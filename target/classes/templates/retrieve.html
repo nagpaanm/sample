@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Data</title>
+
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/style.css" 
+	th:href="@{/css/style.css}" />
+</head>
+<body>
+	<h1 th:text = "'Table: ' + ${table}"></h1>
+	<h2>Select Columns To Display: </h2>
+	<form action="/fetch" method="GET">
+		<input type="hidden" th:value="${table}" name="table">
+		<input type="checkbox" 
+				th:each="column : ${columns}" 
+				th:text="${column}"
+				th:value="${column}"
+				name="columns"
+				class="boxes-columns"><br>
+		<input type="submit" value="query">
+	</form>
+</body>
+</html>

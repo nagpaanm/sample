@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/style.css" 
+	th:href="@{/css/style.css}" />
+
+</head>
+<body>
+	<form action="retrieve" method="GET">
+	<h1>Select Table</h1>
+		Select:<select id="tables" name="tables">
+			<option th:each="table : ${tables}" th:text="${table}"
+				th:value="${table}"></option>
+		</select>
+		<input type="submit" value="submit">
+	</form>
+</body>
+</html>

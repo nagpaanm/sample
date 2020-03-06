@@ -1,0 +1,26 @@
+@charset "ISO-8859-1";
+
+body{
+	font-size:2em;
+}
+
+*{
+	text-align:center;
+}
+
+.boxes-columns{
+	display:inline-block;
+	color:red;
+}
+
+table{
+	text-align:center;
+	margin:auto;
+	max-height:500px;
+	overflow:auto;
+}
+
+input:submit{
+	font-size:1.25em;
+}
+

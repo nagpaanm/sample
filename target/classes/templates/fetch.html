@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Results</title>
+
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/style.css" 
+	th:href="@{/css/style.css}" />
+</head>
+<body>
+	<h1 th:text = "'Table: ' + ${table}"></h1>
+	<table border="1">
+		<tr>
+			<th th:each="column : ${columns}" th:text="${column}"></th>
+		</tr>
+		<tr th:each="result : ${results}">
+			<td th:each = "column : ${result}" th:text="${column}"></td>
+		</tr>
+	</table>
+
+</body>
+</html>
